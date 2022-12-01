@@ -41,7 +41,7 @@
 #systemctl restart nginx &>>$LOG
 #STAT $?
 #
-
+-
 - name: Install Nginx
   ansible.builtin.yum:
     name: nginx
