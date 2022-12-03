@@ -5,4 +5,3 @@
       community.aws.aws_ssm_parameter_store:
         name: "param.dev.catalogue.MONGO"
         value: "false"
-
