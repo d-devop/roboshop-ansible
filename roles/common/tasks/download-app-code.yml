@@ -1,8 +1,3 @@
-
-#  PRINT "Extracting App Content"
-#  unzip -o /tmp/$COMPONENT.zip &>>$LOG
-#  STAT $?
-
 - name: Add RoboShop Application User
   when: APP_USER is defined
   ansible.builtin.user:
