@@ -40,12 +40,12 @@
   roles:
     - mysql
 
-#- name: Shipping
-#  hosts: SHIPPING
-#  become: yes
-#  roles:
-#    - shipping
-#
+- name: Shipping
+  hosts: SHIPPING
+  become: yes
+  roles:
+    - shipping
+
 #- name: RabbitMQ
 #  hosts: RABBITMQ
 #  become: yes
