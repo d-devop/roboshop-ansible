@@ -46,14 +46,14 @@
   roles:
     - shipping
 
-#- name: RabbitMQ
-#  hosts: RABBITMQ
-#  become: yes
-#  roles:
-#    - rabbitmq
-#
-#- name: Payment
-#  hosts: PAYMENT
-#  become: yes
-#  roles:
-#    - payment
+- name: RabbitMQ
+  hosts: RABBITMQ
+  become: yes
+  roles:
+    - rabbitmq
+
+- name: Payment
+  hosts: PAYMENT
+  become: yes
+  roles:
+    - payment
