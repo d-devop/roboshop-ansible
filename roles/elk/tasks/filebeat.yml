@@ -1,12 +1,19 @@
-- name: Update Logstash config
+- name: Copy Yum repo file for filebeat
   ansible.builtin.template:
-    src: logstash.conf
-    dest: /etc/logstash/conf.d/logstash.conf
+    src: elastic.repo
+    dest: /etc/yum.repos.d/elastic.repo
 
-- name: Restart Logstash
+- name: Install Filebeat
+  ansible.builtin.yum:
+    name: filebeat
+    state: installed
+
+- name: Copy Filebeat Config
+  ansible.builtin.template:
+    src: filebeat.yml
+    dest: /etc/filebeat/filebeat.yml
+
+- name: Restart Filebeat
   ansible.builtin.systemd:
-    name: logstash
+    name: filebeat
     state: restarted
-
-- name: Check logstash Running or not
-  ansible.builtin.shell: sleep 30 ; netstat -lntp | grep 5044
