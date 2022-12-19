@@ -8,3 +8,4 @@
 
 - name: Reload Prometheus Service
   ansible.builtin.shell: curl -f -v -X POST http://172.31.10.17:9090/-/reload
+
