@@ -7,7 +7,7 @@ filebeat.inputs:
   fields:
     component: {{ COMPONENT }}
 output.logstash:
-  hosts: ["172.31.90.165:5044"]
+  hosts: ["172.31.19.53:5044"]
 
 ## Defaults
 filebeat.config.modules:
