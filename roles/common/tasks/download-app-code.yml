@@ -9,14 +9,21 @@
     path: "{{ APP_LOC }}"
     state: absent
 
+### Since we are moving to nexus to download artifacts we commented this
+#- name: Download App Content & Extract it
+#  ansible.builtin.unarchive:
+#    src: https://github.com/devops-d/{{COMPONENT}}/archive/refs/heads/main.zip
+#    dest: "/tmp"
+#    remote_src: yes
+#
+#- name: Copy Extracted App Content to App Location
+#  ansible.builtin.copy:
+#    src: /tmp/{{COMPONENT}}-main/
+#    dest: "{{ APP_LOC }}/"
+#    remote_src: yes
+
 - name: Download App Content & Extract it
   ansible.builtin.unarchive:
-    src: https://github.com/d-devop/{{COMPONENT}}/archive/refs/heads/main.zip
-    dest: "/tmp"
-    remote_src: yes
-
-- name: Copy Extracted App Content to App Location
-  ansible.builtin.copy:
-    src: /tmp/{{COMPONENT}}-main/
-    dest: "{{ APP_LOC }}/"
+    src: http://{{NEXUS_USER}}:{{NEXUS_PASS}}@nexus.devops-d.online:8081/repository/{{COMPONENT}}/{{COMPONENT}}-{{APP_VERSION}}.zip
+    dest: "{{ APP_LOC }}"
     remote_src: yes
