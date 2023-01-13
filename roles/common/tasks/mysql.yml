@@ -5,6 +5,10 @@
       - python3-PyMySQL
     state: installed
 
+- name: Create app user
+  community.mysql.mysql_query:
+    query: GRANT ALL ON cities.*
+
 - name: Load Schema
   community.mysql.mysql_db:
     state: import
