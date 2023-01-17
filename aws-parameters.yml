@@ -26,7 +26,8 @@
         - {name: "param.dev.mysql.ROOT_PASSWORD", value: "RoboShop@123"}
         - {name: "param.dev.shipping.DB_HOST", value: "dev-rds.cluster-cbvsbeoyxek4.us-east-1.rds.amazonaws.com"}
         - {name: "param.dev.shipping.CART_ENDPOINT", value: "dev-cart.devops-d.online:8080"}
-        - {name: "param.dev.shipping.ROOT_PASSWORD", value: "RoboShop@1"}
+        - {name: "param.dev.shipping.ROOT_PASSWORD", value: "RoboShop@123"}
+        - {name: "param.dev.shipping.ROOT_USERNAME", value: "admin1"}
         - { name: "param.dev.payment.USER_HOST", value: "dev-user.devops-d.online" }
         - {name: "param.dev.payment.USER_PORT", value: "80"}
         - { name: "param.dev.payment.CART_HOST", value: "dev-cart.devops-d.online" }
@@ -42,6 +43,7 @@
         - { name: "param.dev.docdb.PASSWORD", value: "RoboShop123" }
         - { name: "param.dev.rds.USERNAME", value: "admin1" }
         - { name: "param.dev.rds.PASSWORD", value: "RoboShop123" }
+
 
         - { name: "param.prod.catalogue.MONGO", value: "true" }
         - { name: "param.prod.catalogue.MONGO_ENDPOINT", value: "prod-docdb.cluster-cbvsbeoyxek4.us-east-1.docdb.amazonaws.com" }
