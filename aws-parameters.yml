@@ -19,8 +19,8 @@
         - {name: "param.dev.user.MONGO", value: "true"}
         - {name: "param.dev.user.MONGO_ENDPOINT", value: "dev-docdb.cluster-cy5eftqrcuio.us-east-1.docdb.amazonaws.com"}
         - {name: "param.dev.user.MONGO_URL", value: "mongodb://admin1:RoboShop@123@dev-docdb.cluster-cy5eftqrcuio.us-east-1.docdb.amazonaws.com:27017/users?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false"}
-        - { name: "param.dev.user.REDIS_HOST", value: "dev-elasticache.nud0cy.0001.use1.cache.amazonaws.com" }
-        - { name: "param.dev.cart.REDIS_HOST", value: "dev-elasticache.nud0cy.0001.use1.cache.amazonaws.com" }
+        - { name: "param.dev.user.REDIS_HOST", value: "dev-elasticache.cuzky0.0001.use1.cache.amazonaws.com" }
+        - { name: "param.dev.cart.REDIS_HOST", value: "dev-elasticache.cuzky0.0001.use1.cache.amazonaws.com" }
         - { name: "param.dev.cart.CATALOGUE_HOST", value: "dev-catalogue.devops-d.online" }
         - {name: "param.dev.cart.CATALOGUE_PORT", value: "80"}
         - {name: "param.dev.mysql.ROOT_PASSWORD", value: "RoboShop@123"}
